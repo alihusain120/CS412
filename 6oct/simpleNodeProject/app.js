@@ -7,6 +7,7 @@ const logger = require('morgan');
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const fxRouter = require('./routes/fx')
+const passingArgsRouter = require('./routes/passingArgs')
 
 const app = express();
 
@@ -33,6 +34,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //these end up being relative routes
 //let's say I have '/bob in each route file
+app.use('/passingArgs', passingArgsRouter);
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/fx', fxRouter)
