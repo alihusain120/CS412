@@ -1,5 +1,12 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  h1= 'WeatherChecker'
+  p Check out some weather.
+
+  body
+    form(action='/', method='POST')
+      p
+        | Enter City:
+        input(type='text', name='city', placeholder='city')
+      input(type='submit', value='Submit')
