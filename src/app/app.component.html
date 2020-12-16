@@ -11,5 +11,20 @@
 
 
 <div>
-  <input type="text" [(ngModel)]="selectedDayRate">
+  <label>
+    <input type="text" [(ngModel)]="selectedDayRate">
+  </label>
 </div>
+
+
+<h3>Different Countries for EXRate</h3>
+<form (ngSubmit)="getCountry()">
+  Country: <label>
+  <input name="country" [(ngModel)]="country">
+</label>
+  <button type="submit">Submit</button>
+
+</form>
+
+
+
